@@ -1,20 +1,22 @@
 import smtplib, ssl #creates a secure connection to an email server
 from email.mime.text import MIMEText #std for formatting emails - simple text emails
 from email.mime.multipart import MIMEMultipart # for complex emails say attachments etc
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 def send_email(subject, body, to_email):
     host = "smtp.gmail.com"
     port = 587
     from_email = "aishuk3@gmail.com"
-    password = "twge owam abdn uyir"
+    password = os.getenv("Gmail_app_password")
 
-    #context = ssl.create_default_context()
  # Create proper email structure
     msg = MIMEMultipart() #msg is like an envelope
     msg['From'] = from_email
     msg['To'] = to_email
     msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain')) #add body from main file
+    msg.attach(MIMEText(body,'plain')) #add body from main file
 
     try:
         #connect to Gmail's smtp server
@@ -29,5 +31,3 @@ def send_email(subject, body, to_email):
     except Exception as e:
 
         print(f"❌ Error sending email: {e}")
-
-#send_email("Hello, how are you?")
