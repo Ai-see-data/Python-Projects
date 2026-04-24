@@ -27,7 +27,7 @@ jobs:
       env:
         NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
       run: |
