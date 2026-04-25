@@ -8,8 +8,8 @@ load_dotenv()
 
 topic = "AI OR artificial intelligence OR machine learning"
 sources = "techcrunch,the-verge,wired,ars-technica"
-News_api_key=os.getenv("News_api_key")
-Gemini_api_key=os.getenv("Gemini_api_key")
+News_api_key=os.getenv("NEWS_API_KEY")
+Gemini_api_key=os.getenv("GEMINI_API_KEY")
 
 URL=("https://newsapi.org/v2/everything?"\
     f"sources={sources}&"\
