@@ -17,7 +17,7 @@ URL=("https://newsapi.org/v2/everything?"\
     "sortBy=publishedAt&"\
     "language=en&"\
     "pageSize=8&"\
-    + News_api_key
+    f"apiKey={News_api_key}"
 )
 #make request
 request = requests.get(URL) #sends http get req to newsapi and newsapi prepares the response in JSON
