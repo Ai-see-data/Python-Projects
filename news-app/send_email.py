@@ -9,7 +9,7 @@ def send_email(subject, body, to_email):
     host = "smtp.gmail.com"
     port = 587
     from_email = "aishuk3@gmail.com"
-    password = os.getenv("Gmail_app_password")
+    password = os.getenv("GMAIL_APP_PASSWORD ")
 
  # Create proper email structure
     msg = MIMEMultipart() #msg is like an envelope
