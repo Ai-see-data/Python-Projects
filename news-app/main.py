@@ -2,7 +2,7 @@ import os
 import requests
 from langchain.chat_models import init_chat_model
 from dotenv import load_dotenv
-from send_mail import send_email
+from send_email import send_email
 load_dotenv()
 
 
